@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 from django.contrib.auth.decorators import login_required
-=======
->>>>>>> f0cd2593277913cb200eeba463bd4ac60b11a99e
 from django.shortcuts import render
 
 # Create your views here.
-<<<<<<< HEAD
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
