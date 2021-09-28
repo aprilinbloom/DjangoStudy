@@ -60,9 +60,3 @@ class ArticleListView(ListView):
     context_object_name = 'article_list'
     template_name = 'articleapp/list.html'
     paginate_by = 5
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> parent of 26a4e96 (djust Django course 35 commit)
->>>>>>> f0cd2593277913cb200eeba463bd4ac60b11a99e
