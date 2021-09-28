@@ -1,6 +1,7 @@
-from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
 # Create your views here.
+<<<<<<< HEAD
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
@@ -57,3 +58,5 @@ class ArticleListView(ListView):
     context_object_name = 'article_list'
     template_name = 'articleapp/list.html'
     paginate_by = 5
+=======
+>>>>>>> parent of 26a4e96 (djust Django course 35 commit)
