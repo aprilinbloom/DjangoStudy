@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 from django.contrib.auth.decorators import login_required
+=======
+>>>>>>> f0cd2593277913cb200eeba463bd4ac60b11a99e
+from django.shortcuts import render
 
 # Create your views here.
+<<<<<<< HEAD
 from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
-from django.views.generic import CreateView, DetailView, UpdateView, DeleteView
+from django.views.generic import CreateView, DetailView, UpdateView, DeleteView, ListView
 
 from articleapp.decorators import article_ownership_required
-from articleapp.models import Article
 from articleapp.forms import ArticleCreationForm
+from articleapp.models import Article
 
 
 @method_decorator(login_required, 'get')
@@ -26,10 +31,12 @@ class ArticleCreateView(CreateView):
     def get_success_url(self):
         return reverse('articleapp:detail', kwargs={'pk': self.object.pk})
 
+
 class ArticleDetailView(DetailView):
     model = Article
     context_object_name = 'target_article'
     template_name = 'articleapp/detail.html'
+
 
 @method_decorator(article_ownership_required, 'get')
 @method_decorator(article_ownership_required, 'post')
@@ -50,3 +57,16 @@ class ArticleDeleteView(DeleteView):
     context_object_name = 'target_article'
     success_url = reverse_lazy('articleapp:list')
     template_name = 'articleapp/delete.html'
+
+
+class ArticleListView(ListView):
+    model = Article
+    context_object_name = 'article_list'
+    template_name = 'articleapp/list.html'
+    paginate_by = 5
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> parent of 26a4e96 (djust Django course 35 commit)
+>>>>>>> f0cd2593277913cb200eeba463bd4ac60b11a99e
